@@ -1,0 +1,4 @@
+## LOG
+
+2026-11-05: Started. Fetched Mojang version manifest (launchermeta.mojang.com .../version_manifest.json). Found Mojang now ships 26.x versions; 1.21.11, 1.20.x, 1.19.x etc still present. Fetched full 26.3 version JSON: confirms modern `arguments` format, `javaVersion.majorVersion`=25, natives use `:<os>-<arch>` classifiers with os.name rules, assetIndex + downloads.client. Fetched Fabric loader list (meta.fabricmc.net/v2/versions/loader) — schema: {separator, build, maven, version, stable}.
+TODO: fetch Fabric profile endpoint schema; fetch old pre-1.13 + alpha/beta version JSONs to verify argument format assumption; check ManifestResolverKit; write DESIGN.md; scaffold repo; push diagnostic.
