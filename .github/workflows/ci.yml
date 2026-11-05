@@ -16,5 +16,13 @@ jobs:
           java-version: 17
           distribution: temurin
 
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 35
+
       - name: Gradle :core:test
         run: ./gradlew :core:test --console=plain
+
+      - name: Gradle :app:compileDebugKotlin
+        run: ./gradlew :app:compileDebugKotlin --console=plain
