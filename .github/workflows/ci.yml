@@ -19,7 +19,9 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
         with:
-          api-level: 35
+          accept-android-sdk-licenses: true
+          log-accepted-android-sdk-licenses: true
+          packages: platform-tools
 
       - name: Gradle :core:test
         run: ./gradlew :core:test --console=plain
